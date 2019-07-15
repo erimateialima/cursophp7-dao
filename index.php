@@ -2,25 +2,25 @@
 
 require_once("config.php");
 
-//Carrega um usuário
+/*CAREGA UM ÚNICO USUÁRIO*/
 //$usuario = new Usuario();
 //$usuario->loadById(1);
 //echo $usuario;
 
-//carrega uma lista de usuários
+/*CARREGA UMA LISTA DE USUÁRIOS*/
 //$lista = Usuario::getList();
 //echo json_encode($lista);
 
-//carrega uma lista de usuários buscando pelo gonhin
+/*CARREGA UMA LISTRA DE USUÁRIOS BUSCANDO PELO LOGIN*/
 //$search = Usuario::search("user");
 //echo json_encode($search);
 
-//carrega o usuario usando o login e a senha
+/*CARREGA USUÁRIO USANDO O LOGIN E SENHA*/
 //$usuario = new Usuario();
 //$usuario->login("user","12345");
 //echo $usuario;
 
-//insere um novo usuário
+/*INSERE UM NOVO USUÁRIO*/
 //$aluno = new Usuario("professor", "123456");
 //$aluno = new Usuario();
 //$aluno->setDeslogin("aluno");
@@ -28,11 +28,17 @@ require_once("config.php");
 //$aluno->insert();
 //echo $aluno;
 
-//atualizar usuário
+/*ALTERAR USUÁRIO*/
 //$usuario = new Usuario();
 //$usuario->loadById(3);
 //$usuario->update("professor","12345");
 //echo $usuario;
+
+/*DELETAR USUÁRIO*/
+$usuario = new Usuario();
+$usuario->loadById(3);
+$usuario->delete();
+echo $usuario;
 
 /*
 echo "<br>";
